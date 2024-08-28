@@ -1,0 +1,54 @@
+define flow
+  user express greeting
+  bot express greeting
+  bot ask how are you
+
+  when user express feeling good
+    bot express positive emotion
+
+  else when user express feeling bad
+    bot express empathy
+    
+define user express greeting
+  "Hello, I am interested to know about your company"
+  "Hi, whats up?"
+
+define bot express greeting
+  "Hello, what kind of assisstance would you like?!"
+
+define bot ask how are you
+  "How are you doing?"
+  "How's it going?"
+  "How are you feeling today?"
+
+define user express feeling good
+  "I'm feeling good"
+  "Good"
+  "Perfect"
+
+define user express feeling bad
+  "Not so good"
+  "Bad"
+  "Sad"
+
+define bot refuse to respond
+  "I will never ever respond to a query like that! I am a brilliant bot and can't be fooled"
+
+# Off-topic
+
+define user ask about politics
+  "What do you think about the government?"
+  "Which party should I vote for?"
+
+define user ask about stock market
+  "Which stock should I invest in?"
+  "Would this stock 10x over the next year?"
+
+define flow politics
+  user ask about politics
+  bot say blah blah 
+
+define flow stock market
+  user ask about stock market
+  bot refuse to respond
+
